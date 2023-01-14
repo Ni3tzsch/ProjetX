@@ -81,7 +81,7 @@ function main() {
 function mainAndCount() {
   typeWriterListe(
     "comingsoon",
-    ["Compte à rebours lancé", "Âmes-Frères", "El Sueño", "Charles Henry"],
+    ["Compte à rebours lancé", "Esprits-Frères", "El Sueño", "Charles Henry"],
     0,
     0
   );
