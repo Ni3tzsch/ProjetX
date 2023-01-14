@@ -38,8 +38,46 @@ function typeWriterListe(elid, texts, index, step) {
   }
 }
 
+function typeWriterListeClass(elid, texts, index, step) {
+  var text = texts[index];
+
+  if (step == 0)
+    document.getElementsByClassName(elid).innerHTML = text.charAt(0);
+
+  if (step < text.length && a == true) {
+    document.getElementsByClassName(elid).innerHTML += text.charAt(step + 1);
+    step++;
+
+    if (step == text.length) {
+      a = false;
+    }
+
+    setTimeout(function () {
+      typeWriterListe(elid, texts, index, step);
+    }, speed);
+  } else {
+    document.getElementsByClassName(elid).innerHTML = document
+      .getElementById(elid)
+      .innerHTML.slice(0, -1);
+    step--;
+
+    if (step == 0) {
+      a = true;
+      index++;
+
+      if (index == texts.length) index = 0;
+
+      document.getElementsByClassName(elid).innerHTML = texts[index].charAt(0);
+    }
+
+    setTimeout(function () {
+      typeWriterListe(elid, texts, index, step);
+    }, speed);
+  }
+}
+
 function typeWriterSimpleText(elid, text, step, _speed) {
-  if (text.length == step && elid != 'last') {
+  if (text.length == step && elid != "last") {
     document.getElementById("pn").style.display = "flex";
   }
 
@@ -71,7 +109,29 @@ function fade(elid) {
 }
 
 function main() {
-  typeWriterListe("msg", ["English ", "French"], 0, 0);
+  typeWriterListe(
+    "msg",
+    [
+      "l'Amour ",
+      "l'Indifférence",
+      "la Joie",
+      "la Tristesse",
+      "le Bonheur",
+      "la Solitude",
+      "les Rires",
+      "les Pleures",
+      "les Réflexions",
+      "les Décisions",
+      "les Discussions",
+      "les Divisions",
+      "les Regrets",
+      "les Regrets",
+      "Âmes-Soeurs",
+      "Esprits-Frères",
+    ],
+    0,
+    0
+  );
   loop();
   setTimeout(function () {
     fade("nxt");
@@ -88,10 +148,28 @@ function mainAndCount() {
   loop();
 }
 
+function mainAndCount2() {
+  typeWriterListe(
+    "available",
+    ["Esprits-Frères", "Disponible", "El Sueño", "Charles Henry"],
+    0,
+    0
+  );
+  loop();
+}
+
 function mainPraises() {
-  fade("m_p");
-  typeWriterSimpleText("ptitle", "You can change this text", 0, speed - 50);
   loop();
 }
 
 function mainCountdown() {}
+
+function index() {
+  const element = document.getElementById("comingsoon");
+  if (element.id == "available") {
+    mainAndCount2();
+  } else if (element.id == "comingsoon") {
+  }{
+    mainAndCount();
+  }
+}

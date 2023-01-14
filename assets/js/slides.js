@@ -9,7 +9,6 @@ function plusSlides(n) {
     showSlides(slideIndex += n)
 }
 
-
 function showSlides(n) {
 
     var i
@@ -34,8 +33,11 @@ function showSlides(n) {
               0,
               70
             );
+        document.getElementById("album").style.display = "none"
     } else {
-        
+        // document.getElementById("suiv").innerHTML = "Écouter l'Album"
+        document.getElementById("suiv").remove();
+        document.getElementById("album").style.display = "block";
     }
 
 }

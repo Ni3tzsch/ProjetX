@@ -10,19 +10,31 @@
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css
+    "
+    />
 
     <title>À tous nos amours perdus</title>
   </head>
 
-  <body class="bg-black" onload="mainAndCount()">
+  <body onload="mainAndCount()">
     <div class="main main__countdown">
-      <p class="timer">
+      <p class="timer" id="times">
         <span id="days">00</span>:<span id="hours">00</span>:<span id="minutes"
           >00</span
         >:<span id="seconds">00</span>
       </p>
-
       <p id="comingsoon"></p>
+      <a
+          href="#"
+          class="btn btn-success btn-lg"
+          role="button"
+          id="activate"
+          onclick="myFunction()"
+          >Entrez</a
+        >
     </div>
     <section>
       <svg
@@ -1823,5 +1835,10 @@
 
     <script src="assets/js/countdown.js"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+      function myFunction() {
+        location.href = "/pages/newyear.html";
+      }
+    </script>
   </body>
 </html>

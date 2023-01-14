@@ -5,13 +5,14 @@ var count = setInterval(function () {
 
     var now = new Date().getTime()
     var timeleft = countDownDate - now
+    var buttn = document.getElementById("activate");
 
     if (timeleft <= 0) {
-        document.getElementById("days").innerHTML = 00
-        document.getElementById("hours").innerHTML = 00
-        document.getElementById("minutes").innerHTML = 00
-        document.getElementById("seconds").innerHTML = 00
-        window.location.href = "/pages/newyear.html"
+        document.getElementById("times").remove()
+        document.getElementById("comingsoon").remove()
+        buttn.style.visibility = "visible"
+        
+        
     } else {
 
         var days = Math.floor(timeleft / (1000 * 60 * 60 * 24))
@@ -27,6 +28,7 @@ var count = setInterval(function () {
         document.getElementById("hours").innerHTML = hours
         document.getElementById("minutes").innerHTML = minutes
         document.getElementById("seconds").innerHTML = seconds
+        buttn.style.visibility = "hidden"
     }
 
 }, 1000)
