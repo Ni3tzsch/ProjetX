@@ -39,7 +39,7 @@ function typeWriterListe(elid, texts, index, step) {
 }
 
 function typeWriterSimpleText(elid, text, step, _speed) {
-  if (text.length == step) {
+  if (text.length == step && elid != 'last') {
     document.getElementById("pn").style.display = "flex";
   }
 

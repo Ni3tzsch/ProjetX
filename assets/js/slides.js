@@ -25,6 +25,17 @@ function showSlides(n) {
         slides[i].style.display = "none"
     }
 
-    slides[slideIndex - 1].style.display = "block"
-    typeWriterSimpleText(slides[slideIndex - 1].id, slides[slideIndex - 1].innerHTML, 0, 70)
+    
+    if (slides[slideIndex - 1].id != 'last') {
+        slides[slideIndex - 1].style.display = "block";
+            typeWriterSimpleText(
+              slides[slideIndex - 1].id,
+              slides[slideIndex - 1].innerHTML,
+              0,
+              70
+            );
+    } else {
+        
+    }
+
 }
