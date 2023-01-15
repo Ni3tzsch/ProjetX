@@ -28,7 +28,7 @@ var count = setInterval(function () {
         document.getElementById("hours").innerHTML = hours
         document.getElementById("minutes").innerHTML = minutes
         document.getElementById("seconds").innerHTML = seconds
-        buttn.style.visibility = "hidden"
+        buttn.style.display = "none"
     }
 
 }, 1000)
