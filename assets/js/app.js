@@ -141,7 +141,7 @@ function main() {
 function mainAndCount() {
   typeWriterListe(
     "comingsoon",
-    ["Compte à rebours lancé", "Esprits-Frères", "El Sueño", "Charles Henry"],
+    ["Renée","Marie-Dominique","Lindsey","Yasmine","Daniela","Mælys","Fatim","Gnélé","Samira","Marie-Pierre","Keren","Colombe","Zeinab","Aude","Emmanuella","Anna","Maurelle","Carine","Christelle","Loreen","Pascale","Marie-Emmanuelle","Indira","Chinan","Ashley","Marie-Victoire","Kimberly","Emmanuelle","Léa","Axelle","Astride","Laurine","Priscille","Læticia","Cindy","Mounira","Emmanuella","Andréa","Nanda","Sarata","Laureen","Grâce","Océane","Lauryn","Marie-Dominique","Makany","Alexandra","Carole","Leila","Et à toutes celles qu'on a aimé mais dont le nom nous échappe...","Compte à rebours lancé", "Esprits-Frères", "El Sueño", "Charles Henry", "14 Février"],
     0,
     0
   );
