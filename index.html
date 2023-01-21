@@ -20,6 +20,7 @@
   </head>
 
   <body onload="mainAndCount()">
+    <audio src="andosoftware.mp3" loop="loop" id="my_audio"></audio>
     <div class="main main__countdown">
       <p class="timer" id="times">
         <span id="days">00</span>:<span id="hours">00</span>:<span id="minutes"
@@ -1835,10 +1836,10 @@
 
     <script src="assets/js/countdown.js"></script>
     <script src="assets/js/app.js"></script>
-    <script>
-      function myFunction() {
-        location.href = "/pages/newyear.html";
-      }
+    <script type="text/javascript">
+      window.onload = function () {
+        document.getElementById("my_audio").play();
+      };
     </script>
   </body>
 </html>
