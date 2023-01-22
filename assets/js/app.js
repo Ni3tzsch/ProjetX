@@ -141,7 +141,70 @@ function main() {
 function mainAndCount() {
   typeWriterListe(
     "comingsoon",
-    ["Renée","Marie-Dominique","Lindsey","Yasmine","Daniela","Mælys","Fatim","Gnélé","Samira","Marie-Pierre","Keren","Colombe","Zeinab","Aude","Emmanuella","Anna","Maurelle","Grâce-Océane","Carine","Christelle","Loreen","Pascale","Marie-Emmanuelle","Kebolé","Indira","Chinan","Ashley","Marie-Victoire","Kimberly","Emmanuelle","Léa","Axelle","Astride","Laurine","Priscille","Læticia","Cindy","Mounira","Emmanuella","Andréa","Nanda","Sarata","Laureen","Grâce","Océane","Lauryn","Marie-Dominique","Makany","Alexandra","Carole","Leila","Aïcha","Grâce-Emmanuella","Et à toutes celles qu'on a aimé mais dont le nom nous échappe...","Compte à rebours lancé", "Esprits-Frères", "El Sueño", "Charles Henry", "14 Février"],
+    [
+      "Renée",
+      "Marie-Dominique",
+      "Lindsey",
+      "Yasmine",
+      "Daniela",
+      "Mælys",
+      "Fatim",
+      "Gnélé",
+      "Samira",
+      "Marie-Pierre",
+      "Keren",
+      "Colombe",
+      "Zeinab",
+      "Aude",
+      "Emmanuella",
+      "Maurelle",
+      "Grâce-Océane",
+      "Carine",
+      "Christelle",
+      "Loreen",
+      "Pascale",
+      "Marie-Emmanuelle",
+      "Kebolé",
+      "Indira",
+      "Chinan",
+      "Ashley",
+      "Marie-Victoire",
+      "Anne-Doriane",
+      "Kimberly",
+      "Emmanuelle",
+      "Léa",
+      "Axelle",
+      "Astride",
+      "Laurine",
+      "Priscille",
+      "Læticia",
+      "Cindy",
+      "Mounira",
+      "Anne-Colombe",
+      "Emmanuella",
+      "Andréa",
+      "Nanda",
+      "Sarata",
+      "Laureen",
+      "Grâce",
+      "Océane",
+      "Lauryn",
+      "Marie-Dominique",
+      "Makany",
+      "Alexandra",
+      "Carole",
+      "Leila",
+      "Aïcha",
+      "Grâce-Emmanuella",
+      "Assita",
+      "Et à toutes celles qu'on a aimé,",
+      "mais dont le nom nous échappe...",
+      "Compte à rebours lancé",
+      "Esprits-Frères",
+      "El Sueño",
+      "Charles Henry",
+      "14 Février",
+    ],
     0,
     0
   );
@@ -169,7 +232,8 @@ function index() {
   if (element.id == "available") {
     mainAndCount2();
   } else if (element.id == "comingsoon") {
-  }{
+  }
+  {
     mainAndCount();
   }
 }
