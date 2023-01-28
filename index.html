@@ -26,11 +26,14 @@
 
   <body onload="mainAndCount()">
     <div class="main main__countdown">
+      <!-- L'heure -->
       <p class="timer" id="times">
         <span id="days">00</span>:<span id="hours">00</span>:<span id="minutes"
           >00</span
         >:<span id="seconds">00</span>
       </p>
+
+      <!-- Album disponible -->
       <p id="available">
         <span>E</span><span>s</span><span>p</span><span>r</span><span>i</span
         ><span>t</span><span>s</span><span>-</span><span>F</span><span>r</span
@@ -39,14 +42,22 @@
         ><span>I</span><span>B</span><span>L</span><span>E</span>
       </p>
       <p id="comingsoon"></p>
+
+      <!-- Com d'andoscopie -->
       <p id="andoscopie">
         Andoscopie toujours disponible <br />
         &darr; &darr; &darr; &darr; &darr; &darr;
       </p>
+
+      <!-- Glisser pour déverouiller -->
       <p id="available3" class="text" data-text="Glissez pour dévrouiller">
         Glissez pour dévrouiller
       </p>
+
+      <!-- Le slider -->
       <input id="available4" type="range" value="0" class="pullee" />
+
+      <!-- Moi et CH -->
       <p id="available2">
         <span>E</span><span>l</span> <span>S</span><span>u</span><span>e</span
         ><span>ñ</span><span>o</span><span> </span> <span>x</span> <span> </span
@@ -54,6 +65,8 @@
         ><span>e</span><span>s</span><span> </span><span>H</span><span>e</span
         ><span>n</span><span>r</span><span>y</span>
       </p>
+
+      <!-- Soundlcloud -->
       <iframe
         id="soundframe"
         width="95%"
@@ -80,6 +93,8 @@
         "
       ></div>
     </div>
+
+    <!-- Cœur -->
     <section>
       <svg
         version="1.1"
@@ -1876,15 +1891,27 @@
         </g>
       </svg>
     </section>
-    <script type="text/javascript">
-      function myFunction() {
-        location.href = "pages/home.html";
-      }
+
+    <!-- Page de chargement -->
+    <div id="preloader"></div>
+    <script>
+      // Pour l'affichage et l'animation de la page de chargement
+      var loader = document.getElementById("preloader");
+      setTimeout(function () {
+        loader.style.display = "none";
+      }, 3000);
+
+      // Disparition de la page de chargement
+      setTimeout(function () {
+        loader.animate({ opacity: 0 }, 1000);
+      }, 2000);
     </script>
+
+    <!-- Fonction Glisser pour déverouiller -->
     <script type="text/javascript">
       var inputRange = document.getElementsByClassName("pullee")[0],
-        maxValue = 150, // the higher the smoother when dragging
-        speed = 12, // thanks to @pixelass for this
+        maxValue = 2000, // the higher the smoother when dragging
+        speed = 200, // thanks to @pixelass for this
         currValue,
         rafID;
 
@@ -1927,15 +1954,15 @@
         currValue = currValue - speed;
       }
 
-      // handle successful unlock
+      // Ouverture dans un nouvel onglet
       function successHandler() {
         location.href = "pages/home.html";
 
-        // reset input range
+        // Réinitialiser la plage d'entrée
         inputRange.value = 0;
       }
 
-      // bind events
+      // Au cas où!
       inputRange.addEventListener("mousedown", unlockStartHandler, false);
       inputRange.addEventListener("mousestart", unlockStartHandler, false);
       inputRange.addEventListener("mouseup", unlockEndHandler, false);
