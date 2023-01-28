@@ -3,14 +3,13 @@ var countDownDate = new Date("Feb 14, 2023 00:00:00").getTime();
 var count = setInterval(function () {
   var now = new Date().getTime();
   var timeleft = countDownDate - now;
-  var buttn = document.getElementById("activate");
-  var soundcloud = document.getElementById("soundcloud");
 
   if (timeleft <= 0) {
     document.getElementById("times").remove();
     document.getElementById("comingsoon").remove();
-    buttn.style.visibility = "visible";
-    soundcloud.remove();
+    document.getElementById("andoscopie").remove();
+    document.querySelector("iframe").remove();
+    document.getElementById("soundiv").remove();
   } else {
     var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
     days = days < 10 ? "0" + String(days) : String(days);
@@ -27,6 +26,10 @@ var count = setInterval(function () {
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
-    buttn.style.display = "none";
+    document.getElementById("available").style.display = "none";
+    document.getElementById("available2").style.display = "none";
+    document.getElementById("available3").style.display = "none";
+    document.getElementById("available4").style.display = "none";
+    // document.getElementById("available").remove();
   }
 }, 1000);

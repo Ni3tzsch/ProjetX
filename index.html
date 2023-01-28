@@ -16,56 +16,69 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css
     "
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
 
     <title>À tous nos amours perdus</title>
   </head>
 
   <body onload="mainAndCount()">
-    <!-- <audio
-      src="assets/audio/andosoftware.mp3"
-      loop="loop"
-      id="my_audio"
-      autoplay="autoplay"
-    ></audio> -->
     <div class="main main__countdown">
       <p class="timer" id="times">
         <span id="days">00</span>:<span id="hours">00</span>:<span id="minutes"
           >00</span
         >:<span id="seconds">00</span>
       </p>
+      <p id="available">
+        <span>E</span><span>s</span><span>p</span><span>r</span><span>i</span
+        ><span>t</span><span>s</span><span>-</span><span>F</span><span>r</span
+        ><span>è</span><span>r</span><span>e</span><span>s</span> <span>D</span
+        ><span>I</span><span>S</span><span>P</span><span>O</span><span>N</span
+        ><span>I</span><span>B</span><span>L</span><span>E</span>
+      </p>
       <p id="comingsoon"></p>
-      <a
-        href="#"
-        class="btn btn-success btn-lg"
-        role="button"
-        id="activate"
-        onclick="myFunction()"
-        >Entrez</a
-      >
-      <div id="soundcloud">
-        <iframe
-          width="100%"
-          height="50%"
-          scrolling="yes"
-          frameborder="no"
-          allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1550739400&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-        ></iframe>
-        <div
-          style="
-            font-size: 10px;
-            color: #cccccc;
-            line-break: anywhere;
-            word-break: normal;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
-              Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-            font-weight: 100;
-          "
-        ></div>
-      </div>
+      <p id="andoscopie">
+        Andoscopie toujours disponible <br />
+        &darr; &darr; &darr; &darr; &darr; &darr;
+      </p>
+      <p id="available3" class="text" data-text="Glissez pour dévrouiller">
+        Glissez pour dévrouiller
+      </p>
+      <input id="available4" type="range" value="0" class="pullee" />
+      <p id="available2">
+        <span>E</span><span>l</span> <span>S</span><span>u</span><span>e</span
+        ><span>ñ</span><span>o</span><span> </span> <span>x</span> <span> </span
+        ><span>C</span><span>h</span><span>a</span><span>r</span><span>l</span
+        ><span>e</span><span>s</span><span> </span><span>H</span><span>e</span
+        ><span>n</span><span>r</span><span>y</span>
+      </p>
+      <iframe
+        id="soundframe"
+        width="95%"
+        height="25%"
+        scrolling="yes"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1550739400&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+      ></iframe>
+      <div
+        id="soundiv"
+        style="
+          border-radius: 5%;
+          font-size: 10px;
+          color: #cccccc;
+          line-break: anywhere;
+          word-break: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+            Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+          font-weight: 100;
+        "
+      ></div>
     </div>
     <section>
       <svg
@@ -1867,6 +1880,66 @@
       function myFunction() {
         location.href = "pages/home.html";
       }
+    </script>
+    <script type="text/javascript">
+      var inputRange = document.getElementsByClassName("pullee")[0],
+        maxValue = 150, // the higher the smoother when dragging
+        speed = 12, // thanks to @pixelass for this
+        currValue,
+        rafID;
+
+      // set min/max value
+      inputRange.min = 0;
+      inputRange.max = maxValue;
+
+      // listen for unlock
+      function unlockStartHandler() {
+        // clear raf if trying again
+        window.cancelAnimationFrame(rafID);
+
+        // set to desired value
+        currValue = +this.value;
+      }
+
+      function unlockEndHandler() {
+        // store current value
+        currValue = +this.value;
+
+        // determine if we have reached success or not
+        if (currValue >= maxValue) {
+          successHandler();
+        } else {
+          rafID = window.requestAnimationFrame(animateHandler);
+        }
+      }
+
+      // handle range animation
+      function animateHandler() {
+        // update input range
+        inputRange.value = currValue;
+
+        // determine if we need to continue
+        if (currValue > -1) {
+          window.requestAnimationFrame(animateHandler);
+        }
+
+        // decrement value
+        currValue = currValue - speed;
+      }
+
+      // handle successful unlock
+      function successHandler() {
+        location.href = "pages/home.html";
+
+        // reset input range
+        inputRange.value = 0;
+      }
+
+      // bind events
+      inputRange.addEventListener("mousedown", unlockStartHandler, false);
+      inputRange.addEventListener("mousestart", unlockStartHandler, false);
+      inputRange.addEventListener("mouseup", unlockEndHandler, false);
+      inputRange.addEventListener("touchend", unlockEndHandler, false);
     </script>
     <script src="assets/js/countdown.js"></script>
     <script src="assets/js/app.js"></script>

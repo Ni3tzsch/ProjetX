@@ -164,7 +164,7 @@ function mainAndCount() {
       "Loreen",
       "Pascale",
       "Marie-Emmanuelle",
-      "Kebolé",
+      "Kébolé",
       "Indira",
       "Chinan",
       "Ashley",
@@ -189,7 +189,6 @@ function mainAndCount() {
       "Grâce",
       "Océane",
       "Lauryn",
-      "Marie-Dominique",
       "Makany",
       "Alexandra",
       "Carole",
@@ -201,20 +200,9 @@ function mainAndCount() {
       "mais dont le nom nous échappe...",
       "Compte à rebours lancé",
       "Esprits-Frères",
-      "El Sueño",
-      "Charles Henry",
+      "El Sueño x Charles Henry",
       "14 Février",
     ],
-    0,
-    0
-  );
-  loop();
-}
-
-function mainAndCount2() {
-  typeWriterListe(
-    "available",
-    ["Esprits-Frères", "Disponible", "El Sueño", "Charles Henry"],
     0,
     0
   );
@@ -226,14 +214,3 @@ function mainPraises() {
 }
 
 function mainCountdown() {}
-
-function index() {
-  const element = document.getElementById("comingsoon");
-  if (element.id == "available") {
-    mainAndCount2();
-  } else if (element.id == "comingsoon") {
-  }
-  {
-    mainAndCount();
-  }
-}
