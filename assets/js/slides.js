@@ -33,11 +33,11 @@ function showSlides(n) {
               0,
               70
             );
-        document.getElementById("album").style.display = "none"
+        document.getElementById("bouton").style.display = "none"
     } else {
         // document.getElementById("suiv").innerHTML = "Écouter l'Album"
         document.getElementById("suiv").remove();
-        document.getElementById("album").style.display = "block";
+        document.getElementById("bouton").style.display = "block";
     }
 
 }
