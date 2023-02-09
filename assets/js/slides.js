@@ -37,6 +37,7 @@ function showSlides(n) {
     } else {
         // document.getElementById("suiv").innerHTML = "Écouter l'Album"
         document.getElementById("suiv").remove();
+        document.getElementById("data").remove();
         document.getElementById("bouton").style.display = "block";
     }
 
