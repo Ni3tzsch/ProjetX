@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap");
+@font-face {
+  font-family: "dalek_pinpointbold";
+  src: url("dalekpinpointbold-webfont.woff2") format("woff2"),
+    url("dalekpinpointbold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "caesarregular";
+  src: url("caesar-webfont.woff2") format("woff2"),
+    url("caesar-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -119,19 +134,18 @@ body {
   z-index: -2;
 }
 
-.bouton{
+.bouton {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  
 }
 
 #presentation {
-  font-family: 'Caesar';
+  font-family: "Caesar";
   text-align: center;
 }
-#greek{
-  font-family: 'Dalek Pinpoint';
+#greek {
+  font-family: "Dalek Pinpoint";
   font-size: 1.5rem;
 }
 
@@ -139,7 +153,7 @@ body {
   text-align: center;
 }
 
-#album{
+#album {
   width: 100%;
 }
 @keyframes rotation {
@@ -194,7 +208,7 @@ body {
     filter: blur(0);
   }
 }
-#lastx{
+#lastx {
   margin: 0 auto;
   margin-bottom: 10%;
   width: 20%;
