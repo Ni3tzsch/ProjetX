@@ -10,6 +10,11 @@ var count = setInterval(function () {
     document.getElementById("andoscopie").remove();
     document.querySelector("iframe").remove();
     document.getElementById("soundiv").remove();
+    document.getElementById("available").style.display = "block";
+    document.getElementById("available2").style.display = "block";
+    document.getElementById("available3").style.display = "block";
+    document.getElementById("available4").style.display = "block";
+    document.getElementById("corazon").innerHTML = "";
   } else {
     var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
     days = days < 10 ? "0" + String(days) : String(days);

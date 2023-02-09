@@ -159,6 +159,7 @@ function mainAndCount() {
       "Emmanuella",
       "Maurelle",
       "Grâce-Océane",
+      "Benny",
       "Carine",
       "Christelle",
       "Loreen",
@@ -168,10 +169,12 @@ function mainAndCount() {
       "Indira",
       "Chinan",
       "Ashley",
+      "Joanna",
       "Marie-Victoire",
       "Anne-Doriane",
       "Kimberly",
       "Emmanuelle",
+      "Laurianne",
       "Léa",
       "Axelle",
       "Astride",
@@ -187,6 +190,7 @@ function mainAndCount() {
       "Sarata",
       "Laureen",
       "Grâce",
+      "Eunice",
       "Océane",
       "Lauryn",
       "Makany",
@@ -196,6 +200,7 @@ function mainAndCount() {
       "Aïcha",
       "Grâce-Emmanuella",
       "Assita",
+      "Patricia",
       "Et à toutes celles qu'on a aimé,",
       "mais dont le nom nous échappe...",
       "Compte à rebours lancé",
@@ -213,31 +218,32 @@ function mainPraises() {
   loop();
 }
 
-function mainCountdown() { }
+function mainCountdown() {}
 
-var countDownDate = new Date("Feb 15, 2023 00:00:00").getTime();
-var count = setInterval(function () {
-  var now = new Date().getTime();
-  var timeleft = countDownDate - now;
-  if (timeleft <= 0) {
-    document.getElementById("hours").remove();
-    document.getElementById("minutes").remove();
-    document.getElementById("seconds").remove();
-    document.getElementById("album").revmove();
-    
+var countDownDatex = new Date("Feb 15, 2023 00:00:00").getTime();
+var countx = setInterval(function () {
+  var nowx = new Date().getTime();
+  var timeleftx = countDownDatex - nowx;
+  if (timeleftx <= 0) {
+    let date = new Date().toLocaleDateString("fr");
+    document.getElementById("bouton").style.fontFamily = "caesarregular";
+    document.getElementById("bouton").innerHTML =
+      " Le 14 est maintenant passé, <br> merci d'avoir écouter Esprits-Frères. L'objectif premier de ce projet était de montrer notre vision actuelle de l'amour qui est en 2023 purement Toxic. <br> Mais il est possible de se défaire de cette toxicité par la vérité, par la transparence et surtout par l'esprit. <br> Le but ayant été atteint, c'est maintenant à votre tour d'entrer en jeu, d'aller rechercher votre esprit-frère mais avant tout d'aimer correctement. <br> <br> Charles Henry & El Sueño. <br><br>";
+    document.getElementById("bouton").insertAdjacentHTML("beforeend", date);
+    document.getElementById("bouton").style.textAlign = "center";
   } else {
-    var hours = Math.floor(
-      (timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    var hoursx = Math.floor(
+      (timeleftx % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
-    hours = hours < 10 ? "0" + String(hours) : String(hours);
-    var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-    minutes = minutes < 10 ? "0" + String(minutes) : String(minutes);
-    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-    seconds = seconds < 10 ? "0" + String(seconds) : String(seconds);
+    hoursx = hoursx < 10 ? "0" + String(hoursx) : String(hoursx);
+    var minutesx = Math.floor((timeleftx % (1000 * 60 * 60)) / (1000 * 60));
+    minutesx = minutesx < 10 ? "0" + String(minutesx) : String(minutesx);
+    var secondsx = Math.floor((timeleftx % (1000 * 60)) / 1000);
+    secondsx = secondsx < 10 ? "0" + String(secondsx) : String(secondsx);
 
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("hoursx").innerHTML = hoursx;
+    document.getElementById("minutesx").innerHTML = minutesx;
+    document.getElementById("secondsx").innerHTML = secondsx;
     // document.getElementById("available").remove();
   }
 }, 1000);
