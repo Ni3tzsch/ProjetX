@@ -228,7 +228,7 @@ var countx = setInterval(function () {
     let date = new Date().toLocaleDateString("fr");
     document.getElementById("bouton").style.fontFamily = "caesarregular";
     document.getElementById("bouton").innerHTML =
-      " Le 14 est maintenant passé, <br> merci d'avoir écouter Esprits-Frères. L'objectif premier de ce projet était de montrer notre vision actuelle de l'amour qui est en 2023 purement Toxic. <br> Mais il est possible de se défaire de cette toxicité par la vérité, par la transparence et surtout par l'esprit. <br> Le but ayant été atteint, c'est maintenant à votre tour d'entrer en jeu, d'aller rechercher votre esprit-frère mais avant tout d'aimer correctement. <br> <br> Charles Henry & El Sueño. <br><br>";
+      "Le 14 est maintenant passé,<br> merci d'avoir écouté Esprits-Frères. L'objectif premier de ce projet était de montrer notre vision actuelle de l'amour en 2023 qui est considérée comme purement toxique.<br> Mais il est possible de se débarrasser de cette toxicité en adoptant la vérité, la transparence et surtout l'esprit.<br> Le but ayant été atteint, c'est maintenant à votre tour de jouer, de chercher votre esprit-frère mais surtout d'aimer de manière appropriée.<br> <br>Charles Henry et El Sueño. <br><br>";
     document.getElementById("bouton").insertAdjacentHTML("beforeend", date);
     document.getElementById("bouton").style.textAlign = "center";
   } else {
