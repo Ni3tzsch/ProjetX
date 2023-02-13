@@ -112,22 +112,12 @@ function main() {
   typeWriterListe(
     "msg",
     [
-      "l'Amour ",
-      "l'Indifférence",
-      "la Joie",
-      "la Tristesse",
-      "le Bonheur",
-      "la Solitude",
-      "les Rires",
-      "les Pleures",
-      "les Réflexions",
-      "les Décisions",
-      "les Discussions",
-      "les Divisions",
-      "les Regrets",
-      "les Regrets",
+      "Portez vos écouteurs",
+      "Videz votre esprit",
+      "Soyez relax",
       "Âmes-Soeurs",
       "Esprits-Frères",
+      "Allez-y",
     ],
     0,
     0
@@ -135,7 +125,7 @@ function main() {
   loop();
   setTimeout(function () {
     fade("nxt");
-  }, 1500);
+  }, 10000);
 }
 
 function mainAndCount() {
@@ -203,7 +193,7 @@ function mainAndCount() {
       "Patricia",
       "Et à toutes celles qu'on a aimé,",
       "mais dont le nom nous échappe...",
-      "Compte à rebours lancé",
+      "Il reste moins d'une journée",
       "Esprits-Frères",
       "El Sueño x Charles Henry",
       "14 Février",
